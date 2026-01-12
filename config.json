@@ -1,0 +1,43 @@
+{
+  "port": 3000,
+  "chains": {
+    "ethereum": {
+      "mainnet": [
+        "https://rpc.ankr.com/eth",
+        "https://eth.llamarpc.com",
+        "https://cloudflare-eth.com"
+      ],
+      "goerli": [
+        "https://rpc.ankr.com/eth_goerli"
+      ],
+      "sepolia": [
+        "https://rpc.sepolia.org",
+        "https://rpc.ankr.com/eth_sepolia"
+      ]
+    },
+    "arbitrum": {
+      "mainnet": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://rpc.ankr.com/arbitrum"
+      ]
+    },
+    "optimism": {
+      "mainnet": [
+        "https://mainnet.optimism.io",
+        "https://rpc.ankr.com/optimism"
+      ]
+    },
+    "polygon": {
+      "mainnet": [
+        "https://polygon-rpc.com",
+        "https://rpc.ankr.com/polygon"
+      ]
+    },
+    "base": {
+      "mainnet": [
+        "https://mainnet.base.org",
+        "https://rpc.ankr.com/base"
+      ]
+    }
+  }
+}
