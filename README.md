@@ -3,7 +3,7 @@
 A robust, chain-agnostic JSON-RPC proxy that routes requests to multiple providers with built-in failover and load balancing.
 
 ## Features
-- **Multi-Chain Support**: Configure multiple chains (Ethereum, Arbitrum, Optimism, etc.) and networks (Mainnet, Sepolia).
+- **Multi-Chain Support**: Pre-configured defaults for **ETH, BNB, ARB, MON, MNT, HYPE, AVAX, BASE**. Supports any custom chain via config.
 - **Auto-Balancing & Failover**: The proxy **automatically shuffles** your list of providers for every request. This ensures no single provider is overloaded. If a provider fails, it instantly retries the next one in the list.
 - **Container Ready**: Includes Dockerfile for easy deployment.
 - **Configurable**: Simple `config.json` for managing RPC endpoints.
