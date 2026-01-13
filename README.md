@@ -4,8 +4,7 @@ A robust, chain-agnostic JSON-RPC proxy that routes requests to multiple provide
 
 ## Features
 - **Multi-Chain Support**: Configure multiple chains (Ethereum, Arbitrum, Optimism, etc.) and networks (Mainnet, Sepolia).
-- **Automatic Failover**: Tries the next provider if one fails or returns a specific RPC error.
-- **Load Balancing**: Randomly shuffles providers for each request.
+- **Auto-Balancing & Failover**: The proxy **automatically shuffles** your list of providers for every request. This ensures no single provider is overloaded. If a provider fails, it instantly retries the next one in the list.
 - **Container Ready**: Includes Dockerfile for easy deployment.
 - **Configurable**: Simple `config.json` for managing RPC endpoints.
 
@@ -26,12 +25,16 @@ Edit `config.json` to add your chains and providers:
     "ethereum": {
       "mainnet": [
         "https://rpc.ankr.com/eth",
-        "https://cloudflare-eth.com"
+        "https://eth.llamarpc.com",
+        "https://cloudflare-eth.com",
+        "https://1rpc.io/eth"
       ]
     },
     "arbitrum": {
       "mainnet": [
-        "https://arb1.arbitrum.io/rpc"
+        "https://arb1.arbitrum.io/rpc",
+        "https://rpc.ankr.com/arbitrum",
+        "https://1rpc.io/arb"
       ]
     }
   }

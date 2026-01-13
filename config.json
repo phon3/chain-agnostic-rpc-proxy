@@ -5,38 +5,47 @@
       "mainnet": [
         "https://rpc.ankr.com/eth",
         "https://eth.llamarpc.com",
-        "https://cloudflare-eth.com"
+        "https://cloudflare-eth.com",
+        "https://1rpc.io/eth",
+        "https://ethereum.publicnode.com"
       ],
       "goerli": [
-        "https://rpc.ankr.com/eth_goerli"
+        "https://rpc.ankr.com/eth_goerli",
+        "https://goerli.blockpi.network/v1/rpc/public"
       ],
       "sepolia": [
         "https://rpc.sepolia.org",
-        "https://rpc.ankr.com/eth_sepolia"
+        "https://rpc.ankr.com/eth_sepolia",
+        "https://ethereum-sepolia.publicnode.com"
       ]
     },
     "arbitrum": {
       "mainnet": [
         "https://arb1.arbitrum.io/rpc",
-        "https://rpc.ankr.com/arbitrum"
+        "https://rpc.ankr.com/arbitrum",
+        "https://arbitrum.llamarpc.com",
+        "https://1rpc.io/arb"
       ]
     },
     "optimism": {
       "mainnet": [
         "https://mainnet.optimism.io",
-        "https://rpc.ankr.com/optimism"
+        "https://rpc.ankr.com/optimism",
+        "https://optimism.llamarpc.com"
       ]
     },
     "polygon": {
       "mainnet": [
         "https://polygon-rpc.com",
-        "https://rpc.ankr.com/polygon"
+        "https://rpc.ankr.com/polygon",
+        "https://polygon.llamarpc.com"
       ]
     },
     "base": {
       "mainnet": [
         "https://mainnet.base.org",
-        "https://rpc.ankr.com/base"
+        "https://rpc.ankr.com/base",
+        "https://base.llamarpc.com"
       ]
     }
   }
