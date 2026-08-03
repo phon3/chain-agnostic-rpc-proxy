@@ -16,7 +16,7 @@ try {
     process.exit(1);
 }
 
-const PORT = config.port || 3000;
+const PORT = process.env.PORT || config.port || 3000;
 
 // Helper to shuffle array (Fisher-Yates)
 function shuffleArray(array) {
