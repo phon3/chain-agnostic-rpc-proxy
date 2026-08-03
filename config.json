@@ -59,6 +59,12 @@
         "https://hyperliquid.drpc.org",
         "https://rpc.hypurrscan.io"
       ]
+    },
+    "hood": {
+      "mainnet": [
+        "https://robinhood.rpc.blxrbdn.com",
+        "https://robinhood-rpc.publicnode.com"
+      ]
     }
   }
 }

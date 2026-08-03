@@ -3,7 +3,7 @@
 A robust, chain-agnostic JSON-RPC proxy that routes requests to multiple providers with built-in failover and load balancing.
 
 ## Features
-- **Multi-Chain Support**: Pre-configured defaults for **ETH, BNB, ARB, MON, MNT, HYPE, AVAX, BASE**. Supports any custom chain via config.
+- **Multi-Chain Support**: Pre-configured defaults for **ETH, BNB, ARB, MON, MNT, HYPE, AVAX, BASE, HOOD**. Supports any custom chain via config.
 - **Auto-Balancing & Failover**: The proxy **automatically shuffles** your list of providers for every request. This ensures no single provider is overloaded. If a provider fails, it instantly retries the next one in the list.
 - **Container Ready**: Includes Dockerfile for easy deployment.
 - **Configurable**: Simple `config.json` for managing RPC endpoints.
@@ -16,13 +16,13 @@ npm install
 
 ## Configuration
 
-Edit `config.json` to add your chains and providers:
+Edit `config.json` to add your chains and providers. Chain keys are short abbreviations (e.g. `eth`, `arb`, `hood`), not full names:
 
 ```json
 {
   "port": 3000,
   "chains": {
-    "ethereum": {
+    "eth": {
       "mainnet": [
         "https://rpc.ankr.com/eth",
         "https://eth.llamarpc.com",
@@ -30,7 +30,7 @@ Edit `config.json` to add your chains and providers:
         "https://1rpc.io/eth"
       ]
     },
-    "arbitrum": {
+    "arb": {
       "mainnet": [
         "https://arb1.arbitrum.io/rpc",
         "https://rpc.ankr.com/arbitrum",
@@ -57,14 +57,21 @@ Route your requests to `http://localhost:3000/:chain/:network`.
 
 **Example: Ethereum Mainnet**
 ```bash
-curl -X POST http://localhost:3000/ethereum/mainnet \
+curl -X POST http://localhost:3000/eth/mainnet \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
 
 **Example: Arbitrum Mainnet**
 ```bash
-curl -X POST http://localhost:3000/arbitrum/mainnet \
+curl -X POST http://localhost:3000/arb/mainnet \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
+```
+
+**Example: Robinhood Chain Mainnet**
+```bash
+curl -X POST http://localhost:3000/hood/mainnet \
   -H "Content-Type: application/json" \
   -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
 ```
