@@ -95,3 +95,14 @@ Run the automated test suite:
 ```bash
 npm test
 ```
+
+## Railway Deployment
+
+Railway service configuration lives in [`.railway/railway.ts`](./.railway/railway.ts) (Railway Infrastructure as Code, partial `chain-agnostic-rpc-proxy` inside the `defi-swap-agg` project). Legacy `railway.toml` Config as Code is deprecated and stops being read on **2026-12-01**.
+
+```bash
+(cd .railway && npm install)
+railway link --project defi-swap-agg --environment production
+railway config plan --verbose
+railway config apply
+```

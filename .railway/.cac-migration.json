@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "environmentId": "adf1b405-8ed9-4f1a-8137-73a4ca7bd7c1",
+  "environmentName": "production",
+  "createdAt": "2026-11-16T22:21:51.750434+00:00",
+  "services": [
+    {
+      "serviceId": "873540f8-97c2-455f-927a-eb2868c7332a",
+      "serviceName": "chain-agnostic-rpc-proxy",
+      "railwayConfigFile": "/railway.toml"
+    }
+  ]
+}
